@@ -1,0 +1,15 @@
+a {
+color: blue;
+text-decoration: underline;
+}
+img{
+    max-width: 30em;
+    padding: 2em;
+    float: right;
+}
+.nopad{
+    margin:0 !important;
+}
+.padbot{
+    padding-bottom: 20px;;
+}

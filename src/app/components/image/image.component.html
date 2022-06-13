@@ -1,0 +1,21 @@
+<div *ngIf="(auth.user | async); else normalUser">
+  <div dragula="IMAGES" [(dragulaModel)]="images" class="wrapper">
+    <div *ngFor="let image of images">
+      <div class="box {{image.id}}">
+      <img class="center" src="{{image.imgURL}}" alt="">
+  </div>
+  <button (click)="delete(image)">X</button>
+    </div>
+  </div>
+    <button (click)="addImage()">Upload Image</button>
+    <button (click)="update()">UPDATE</button>
+  </div>
+  <ng-template #normalUser>
+    <div class="wrapper">
+      <div *ngFor="let image of images">
+        <div class="box {{image.id}}">
+        <img class="center" src="{{image.imgURL}}" alt="">
+    </div>
+      </div>
+    </div>
+  </ng-template>

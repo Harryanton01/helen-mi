@@ -1,0 +1,44 @@
+body {
+  margin: 40px;
+}
+
+.wrapper {
+  display: grid;
+  margin-left: 2.5%;
+  margin-right: auto;
+  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(30em, 1fr));
+  color: #444;
+}
+
+.box {
+  padding: 1em;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  max-width: 32em;
+  max-height: 16em;
+  padding: 1em;
+}
+
+.desc {
+  margin-left: 80px;
+  font-style: italic;
+  color: #fff;
+  font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif;
+  text-align: left;
+  font-size: 12px;
+}
+
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+}

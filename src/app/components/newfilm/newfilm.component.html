@@ -1,0 +1,97 @@
+<body>
+    <div *ngIf="(auth.user | async); else normalUser">
+        <div dragula="IMAGES" [(dragulaModel)]="images" class="wrapper">
+          <div *ngFor="let image of images">
+            <div class="box {{image.id}}">
+                <img class="editimage" src="{{image.imgURL}}" alt=""> 
+            </div>
+            <div class="desc">{{image.description}}</div>
+            <div class="desc">{{image.duration}}</div>
+            <button (click)="delete(image)">X</button>
+          </div>
+          
+        </div>
+        
+
+        <div dragula="SOUNDS" [(dragulaModel)]="sounds" class="wrapper">
+          <div *ngFor="let sound of sounds">
+            <div class="box {{sound.orderid}}">
+              <audio controls>
+                <source src="{{sound.soundURL}}" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+              <div class="desc">{{sound.title}}</div>
+              <button (click)="deleteSound(sound)">X</button>
+            </div>
+      
+          </div>
+        </div>
+        <button (click)="addImage()">Add Art</button>
+        <button (click)="addSound()">Add Sound</button>
+        <button (click)="update()">UPDATE</button>
+      </div>
+      <ng-template #normalUser>  
+        <!--
+        <div class="container-fluid">
+          <div *ngFor="let image of images; let i=index">
+            <div  *ngIf="i==0" class="d-flex flex-row flex-wrap justify-content-center">
+              <div *ngIf="i<images.length" class="d-flex flex-column">
+                <a routerLink="/video/{{images[i].id}}">
+                  <img class="img-fluid" src="{{images[i].imgURL}}" alt="">
+                </a>
+              </div>
+              <div *ngIf="i+1<images.length" class="d-flex flex-column">
+                <a routerLink="/video/{{images[i+1].id}}">
+                  <img class="img-fluid" src="{{images[i+1].imgURL}}" alt="">
+                </a>
+              </div>
+              <div *ngIf="i+2<images.length" class="d-flex flex-column">
+                <a routerLink="/video/{{images[i+2].id}}">
+                  <img class="img-fluid" src="{{images[i+2].imgURL}}" alt="">
+                </a>
+              </div>
+              
+              <div *ngIf="i+3<images.length" class="d-flex flex-column d-flex flex-column">
+                <a routerLink="/video/{{images[i+3].id}}">
+                  <img class="img-fluid" src="{{images[i+3].imgURL}}" alt="">
+                </a>
+              </div>
+            </div>
+            <div *ngIf="(i+1)%4==0" class="d-flex flex-row">
+              <div *ngIf="i+1<images.length" class="d-flex flex-column">
+                <a routerLink="/video/{{images[i+1].id}}">
+                  <img class="img-fluid" src="{{images[i+1].imgURL}}" alt="">
+                </a>
+              </div>
+              <div *ngIf="i+2<images.length" class="d-flex flex-column">
+                <a routerLink="/video/{{images[i+2].id}}">
+                  <img class="img-fluid" src="{{images[i+2].imgURL}}" alt="">
+                </a>
+              </div>
+              <div *ngIf="lessThan((i+3), images.length)" class="d-flex flex-column">
+                <a routerLink="/video/{{images[i+3].id}}">
+                  <img class="img-fluid" src="{{images[i+3].imgURL}}" alt="">
+                </a>
+              </div>
+              <div *ngIf="lessThan((i+4), images.length)" class="d-flex flex-column d-flex flex-column">
+                <a  routerLink="/video/{{images[i+4].id}}">
+                  <img class="img-fluid" src="{{images[i+4].imgURL}}" alt="">
+                </a>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      -->
+      <ul>
+        <li *ngFor="let image of images;">
+            <a routerLink="/video/{{image.id}}">
+                <img class="img-fluid" src="{{image.imgURL}}" alt="">
+                  <div class="text">{{image.description}}</div>
+            </a> 
+        </li>
+      </ul>
+      </ng-template>  
+
+</body>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />

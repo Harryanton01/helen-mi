@@ -1,0 +1,117 @@
+<body>
+    <div *ngIf="(auth.user | async); else normalUser">
+        <div *ngIf="selectedEvent">
+            <div class="container-fluid">
+                <div class="row text-center">
+
+                    <div class="col-md-2"> 
+                      <div class="cliente"> 
+                
+                          <div dragula="EVENTS" [(dragulaModel)]="performances">
+                              <div *ngFor="let event of performances" (click)="onSelect(event)">
+                                <div [ngClass]="{'selected': event=== selectedEvent}">
+                                    {{event.title}}
+                                </div>
+                                <button (click)="delete(event)">X</button>
+                              </div>
+                            </div>
+                        
+                      </div>
+                    </div>
+                    <div class="col-md-4 mx-auto text-center"> 
+                      <div class="cliente"> 
+                
+                          <img src="{{selectedEvent.imgURL}}" alt="">
+                        
+                      </div>
+                    </div>
+                    <div class="col-md-3 text-left"> 
+                      <div class="cliente"> 
+                
+                          {{selectedEvent.description}}
+                          
+                          <div *ngIf="bool">
+                            <b>Advice Column</b> was created as part of
+                            ArtLicks 2017 and continues its journey
+                            online.
+                            Submit plea for advice here – stating clearly
+                            the nature of the problem and providing an
+                            email address.
+                            The response will be sent to you directly and
+                            incorporated into a response archive: <a routerLink="/advice">link</a>
+                            <button (click)="mail()" class="center">request advice</button>
+                          </div>
+                        
+                      </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+        <button class="center" (click)="addEvent()">ADD EVENT</button>
+        <button (click)="update()">UPDATE</button>
+    </div>
+   
+    <div>
+       
+  </div>
+
+  <ng-template #normalUser>
+      <div *ngIf="selectedEvent">
+          <div class="container-fluid">
+              <div class="row text-center">
+                <div class="col-md-2"></div>
+                  <div class="col-md-1"> 
+                    <div class="cliente"> 
+                        <div>
+                            <div *ngFor="let event of performances" (click)="onSelect(event)">
+                              <div [ngClass]="{'selected': event=== selectedEvent}">
+                                  {{event.title}}
+                              </div>
+                            </div>
+                          </div>
+                      
+                    </div>
+                  </div>
+                  <div class="col-md-5 mx-auto text-center"> 
+                    <div class="cliente"> 
+                        <div *ngIf="selectedEvent.imgURL">
+                          <img src="{{selectedEvent.imgURL}}" alt="">
+                        </div>
+                        <div *ngIf="selectedEvent.soundURL" class="sound">
+                          <div *ngIf="showPlayer">
+                            <audio controls >
+                              <source src="{{selectedEvent.soundURL}}" type="audio/mpeg">
+                              Your browser does not support the audio element.
+                            </audio>
+                          </div>
+                          
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3"> 
+                    <div class="cliente"> 
+              
+                        {{selectedEvent.description}}
+                        <div *ngIf="bool">
+                          <b>advice column</b> was created as part of
+                          ArtLicks 2017 and continues its journey
+                          online.
+                          submit plea for advice here – stating clearly
+                          the nature of the problem and providing an
+                          email address.
+                          the response will be sent to you directly and
+                          incorporated into a response archive: <a routerLink="/advice">link</a>
+                          <button (click)="mail()" class="center">request advice</button>
+                        </div>
+                        
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+              </div>
+            </div>
+      </div>
+  </ng-template>
+</body>
+
+
+

@@ -1,0 +1,41 @@
+<div *ngIf="(auth.user | async); else normalUser">
+  <div dragula="IMAGES" [(dragulaModel)]="images" class="wrapper">
+    <div *ngFor="let image of images">
+      <div class="box {{image.id}}">
+        <a routerLink="/video/{{image.id}}">
+          <img class="center" src="{{image.imgURL}}" alt="">
+        </a>
+      </div>
+      <div class="desc">{{image.description}}</div>
+      <button (click)="delete(image)">X</button>
+    </div>
+  </div>
+  <div dragula="SOUNDS" [(dragulaModel)]="sounds" class="wrapper">
+    <div *ngFor="let sound of sounds">
+      <div class="box {{sound.orderid}}">
+        <audio controls>
+          <source src="{{sound.soundURL}}" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <div class="desc">{{sound.title}}</div>
+        <button (click)="deleteSound(sound)">X</button>
+      </div>
+
+    </div>
+  </div>
+  <button (click)="addImage()">Add Art</button>
+  <button (click)="addSound()">Add Sound</button>
+  <button (click)="update()">UPDATE</button>
+</div>
+<ng-template #normalUser>
+  <div class="wrapper">
+    <div *ngFor="let image of images">
+      <div class="box {{image.id}}">
+        <a routerLink="/video/{{image.id}}">
+          <img class="center" src="{{image.imgURL}}" alt="">
+          <div class="desc">{{image.description}}</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,33 @@
+
+img{
+    width: 100%;
+    height: auto;
+    max-height: 65em;
+    max-width: 55em;
+}
+
+body {
+    font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif;
+    font-size: 12px;
+}
+button{
+  margin: auto;
+  display: block;
+}
+.row{
+  margin-top: 3em;
+}
+
+.selected{
+  font-weight: bold;
+}
+a{
+  color: blue;
+}
+.col-md-3{
+  text-align: justify;
+  text-justify: inter-word;
+}
+.sound {
+  padding-top: 50px;
+}

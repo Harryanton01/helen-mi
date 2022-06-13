@@ -1,0 +1,176 @@
+<div *ngIf="video" class="video">
+    <div *ngIf="advice" class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <img src="{{firstimage}}"> 
+                <br>
+                <div class="container" style="margin-top:50px;">
+                    <div class="row">
+                        <div class="col-md-6 d-flex justify-content-center text-center">
+                            <a class="link" href="https://firebasestorage.googleapis.com/v0/b/test-27cbf.appspot.com/o/Peppers0.pdf?alt=media&token=870281cf-69a1-44ad-b964-169b8da9f4c3">Peppers0.pdf</a>
+                        </div>
+                        <div class="col-md-6">
+                           
+                        </div>
+                       
+                    </div>
+
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                <app-advice-column></app-advice-column>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="manifest" class="container">
+        <div class="row padding-bottom">
+            <div class="col-md-4">
+                <img style="max-width:500px"class="center" src="{{secondimage}}" alt="">
+                <p>Performance still, courtesy of the Lychee gallery as part of their Performance event in February 2018</p>
+            </div>
+            <div class="col-md-8">
+                <div class="container">
+                    <div class="row">
+                        <iframe [src]="URL" width="440" height="260" frameborder="0" allowfullscreen style="border-style: none;width: 100%; height: 30em;"></iframe>
+                        <p style="margin-left:25%; margin-bottom: 0!important;">Manifest (2017)</p>
+                        <p style="margin-left:25%">7 mins 50 seconds</p>
+                    </div>
+                    <div class="row">
+                        <img style=" max-width: 500px;
+                        padding-top: 80px;"class="center" src="{{firstimage}}" alt="">
+                        <p style="text-align: center;">Performed in with Anastasia Mina at the European Poetry Festival in April 2018</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="spacebat" class="container"> 
+        <div class="row padding-bottom">
+            <div class="col-md-9">
+                <iframe [src]="URL" width="640" height="360" frameborder="0" allowfullscreen style="border-style: none;width: 100%; margin-left:-50px;"></iframe>
+            <p style="margin-left:80px"><b>Spacebat (2016)</b></p>
+            <p style="margin-left:80px">3 mins 28 seconds</p>
+            </div>
+            <div class="col-md-3">
+                <img style="max-width: 500px;;" src="https://firebasestorage.googleapis.com/v0/b/test-27cbf.appspot.com/o/Screenshot%202020-07-22%20at%2015.03.13-min.png?alt=media&token=2766edba-dbcf-498d-9957-7669d7544629" alt="">
+            <p >Performed with Anastasia Mina as part of the Lychee performance event, 2017</p>
+            </div>
+        </div>
+        <div class="row padding-bottom">
+                <img style="max-width: 500px; margin-left:300px" src="{{firstimage}}" alt="">
+
+        </div>
+    </div>
+    <div *ngIf="whatsapp" class="container"> 
+        <div class="row">
+            <div class="col-md-6">
+                <p>Fanatic was one of a series of performances investigating ways in which meaning is dessimenated. Using translation as a device to interrupt understanding, the struggle to deliver meaning using words makes the essential element of communication more apparent. The attempt to create a connection with others becomes an expression of love, which belies the often antagonistic content of the words, and which endures despite the inherent failure of the attempt.</p>
+            </div>
+            <div class="col-md-6">
+                <img style="max-width:500px"src="https://firebasestorage.googleapis.com/v0/b/test-27cbf.appspot.com/o/what's%20app-min%20(1).JPG?alt=media&token=3b2db767-51c1-47d7-9636-153f484dbba7" alt="">
+            <p>Performance with Anastasia Mina at the Jerwood Space in 2019</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img style="max-width:500px"src="https://firebasestorage.googleapis.com/v0/b/test-27cbf.appspot.com/o/Anastasia_performance-4674.jpg?alt=media&token=91202064-31c7-4aee-a0f9-1c40badd29b6" alt="">
+            <p>Performance with Anastasia Mina at the Florence Trust performance evening 2017</p>
+            </div>
+            <div class="col-md-6">
+                
+            </div>
+        </div>
+    </div>
+    <div *ngIf="think" class="container"> 
+        <div class="row padding-bottom">
+            <div class="col-md-5">
+                <img style="max-width:400px"src="https://firebasestorage.googleapis.com/v0/b/test-27cbf.appspot.com/o/poolboy-min.jpg?alt=media&token=af1524ea-1998-4e1f-99a7-7f89c4ae6a0e" alt="">
+
+            </div>
+            <div class="col-md-5">
+                <img style="max-width:400px"src="https://firebasestorage.googleapis.com/v0/b/test-27cbf.appspot.com/o/5bsalespitch%20copy-min.jpg?alt=media&token=bdd0c771-5629-4e26-b41e-ddb218218845" alt="">
+            
+            </div>
+            <div class="col-md-2">
+                <audio controls>
+                    <source src="{{soundURL}}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                  </audio>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img style="max-width:500px"src="https://firebasestorage.googleapis.com/v0/b/test-27cbf.appspot.com/o/dogs%20copy-min.jpg?alt=media&token=a2c6648e-024c-4ff0-9e1f-de36a91729f2" alt="">
+
+            </div>
+            <div class="col-md-6">
+                <img style="max-width:500px; float:right;"src="https://firebasestorage.googleapis.com/v0/b/test-27cbf.appspot.com/o/poster%20copy%202-min.jpg?alt=media&token=7b42aa3c-8162-4958-a212-428686c88302" alt="">
+
+            </div>
+            
+        </div>
+    </div>
+    <div *ngIf="cactus" class="container"> 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <p style="margin:0;"><b>I, Cactus AND</b></p>
+                    <p style="padding-bottom:50px">Performance installation staged with Anastasia Mina as part of amillionlovesongs.com at Filet Space, London EC1 in February 2020</p>
+                    <audio controls>
+                        <source src="{{soundURL}}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                      </audio>
+                </div>
+                <div class="col-md-3">
+                    <img class="cactus" src="https://firebasestorage.googleapis.com/v0/b/test-27cbf.appspot.com/o/9d86864d-03af-450a-98c9-d03adc48247c%20copy-min.jpg?alt=media&token=bf4edf01-ea8f-4496-b9a3-3eaedfe8c8d1">
+                </div>
+                <div class="col-md-3">
+                    <img style="padding-top:-80px !important;"class="cactus" src="https://firebasestorage.googleapis.com/v0/b/test-27cbf.appspot.com/o/cfd061fa-7089-49a3-a9ff-86ba54287220%20copy-min.jpg?alt=media&token=5a20a7f9-59fe-4087-b87f-75efd90c06c7" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="cactus" src="https://firebasestorage.googleapis.com/v0/b/test-27cbf.appspot.com/o/6cac1809-59e6-493f-b820-ba494388e631-min.jpg?alt=media&token=59ebf7db-d296-4c4c-b46f-c65c66ca4fb3" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img class="cactus" src="https://firebasestorage.googleapis.com/v0/b/test-27cbf.appspot.com/o/022_20200215(_MG_1997)%20copy.jpg?alt=media&token=e75c7a19-2bb9-4a3d-9a81-18921f3bf798">
+                </div>
+                <div class="col-md-3">
+                    <img class="cactus" src="https://firebasestorage.googleapis.com/v0/b/test-27cbf.appspot.com/o/blue%20daisies-min.jpg?alt=media&token=20aad370-8ca7-483e-bc3c-17d57122a8d8" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="vid && vidtext">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    <iframe [src]="URL" width="640" height="360" frameborder="0" allowfullscreen style="border-style: none;width: 100%; height: 50em;"></iframe>
+                </div>
+                <div class="col-md-2">
+                    {{videotext}}
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div *ngIf="audio">
+        <div class="container">
+            <div class="row">
+                <div class="col" style="display: flex;
+                justify-content: center;
+                align-items: center;">
+                    <audio controls>
+                        <source src="{{soundURL}}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                      </audio>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div *ngIf="vid && !manifest && !spacebat && !vidtext && !audio">
+        <iframe [src]="URL" width="640" height="360" frameborder="0" allowfullscreen style="border-style: none;width: 100%; height: 50em;"></iframe>
+    </div>
+</div>
